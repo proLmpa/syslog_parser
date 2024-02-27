@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Syslog Log Table</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Version</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Device</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Start Port</th>
+            <th>Dest. Port</th>
+            <th>Action</th>
+            <th>Proto</th>
+            <th>vd_id</th>
+            <th>rule_id</th>
+            <th>Security Level</th>            
+            <th>Message</th>
+        </tr>
+    
+        {% for log in logs %}
+            <tr>
+                {% for value in log %}
+                    <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
